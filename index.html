@@ -113,10 +113,27 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Confetti effect */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f0a446;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fall 3s linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
-<audio autoplay>
+<audio id="jungleAudio" autoplay>
     <source src="lion_king_trimmed.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
@@ -141,4 +158,33 @@
     </div>
 </div>
 </body>
+<script>
+  // Function to play the audio
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById('jungleAudio');
+
+    // Play audio on first click or tap
+    document.body.addEventListener('click', () => {
+      audio.play().catch(e => console.log("Autoplay failed: ", e));
+    }, { once: true });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", createConfetti);
+  });
+
+  function createConfetti(event) {
+    for (let i = 0; i < 30; i++) {
+      const confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.left = `${event.clientX + (Math.random() - 0.5) * 100}px`;
+      confetti.style.top = `${event.clientY + (Math.random() - 0.5) * 100}px`;
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 3000);
+    }
+  }
+</script>
 </html>
