@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild One Birthday Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background_image.webp') no-repeat center center/cover;
+            color: #5a5a5a;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            gap: 20px;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .scrollable {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 40%;
+            width: 100%;
+            height: 60%;
+            overflow-y: auto;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f0a446;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2rem;
+            color: #4b8f52;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .header_wrapper {
+            color: rgba(255, 255, 255, 0.5);
+
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 30px;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        footer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #7b7b7b;
+        }
+        @media (max-width: 768px) {
+            body {
+                background: url('background_image.webp') repeat-y center center/cover;
+                background-size: contain;
+                overflow: hidden;
+            }
+            .container {
+                height: 100vh;
+                justify-content: center;
+            }
+            .scrollable {
+                height: 60%;
+                padding: 15px;
+                max-width: 80%;
+                background: rgba(255, 255, 255, 0.85);
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            p, .header_wrapper {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header_wrapper">
+        <header>Angelo's Wild One!</header>
+    </div>
+    <div class="scrollable">
+        <div class="story">
+            <p>Στην καρδιά της <strong>Ζούγκλας</strong>, όπου τα δέντρα ψιθυρίζουν μυστικά και τα ζώα περιπλανιούνται ελεύθερα, ένα μικρό λιονταράκι, ο <strong>Άγγελος</strong> βασιλεύει εδώ και έναν ολόκληρο χρόνο.</p>
+            <p>Οι ελέφαντες σάλπισαν, οι μαϊμούδες χόρεψαν και οι καμηλοπαρδάλεις τέντωσαν τους λαιμούς τους ψηλά για να γιορτάσουν!</p>
+            <p>Αλλά περίμενε! Το πάρτι δεν είναι ολοκληρωμένο χωρίς <strong>εσένα</strong>. Έλα μαζί μας σε μια μοναδική περιπέτεια όπως καμία άλλη, καθώς γιορτάζουμε τα <strong>1α γενέθλια</strong> του Άγγελου με αληθινό άγριο στιλ!</p>
+        </div>
+        <div class="jungle-theme">
+            <h2>Είσαι Προσκεκλημένος!</h2>
+            <p><strong>Ημερομηνία:</strong> 04/01/2025</p>
+            <p><strong>Ώρα:</strong> 5:00 ΜΜ</p>
+            <p><strong>Θέμα:</strong> Wild One - Περιπέτεια στη Ζούγκλα</p>
+            <p>Οι λεπτομέρειες της τοποθεσίας θα ακολουθήσουν.</p>
+            <p>Ανυπομονούμε να γιορτάσουμε μαζί! 🎉</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

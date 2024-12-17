@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild One Birthday Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('../background_image.webp') no-repeat center center/cover;
+            color: #5a5a5a;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            gap: 20px;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .scrollable {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 40%;
+            width: 100%;
+            height: 60%;
+            overflow-y: auto;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f0a446;
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2rem;
+            color: #4b8f52;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .header_wrapper {
+            color: rgba(255, 255, 255, 0.5);
+
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 30px;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        footer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #7b7b7b;
+        }
+        @media (max-width: 768px) {
+            body {
+                background: url('../background_image.webp') repeat-y center center/cover;
+                background-size: contain;
+                overflow: hidden;
+            }
+            .container {
+                height: 100vh;
+                justify-content: center;
+            }
+            .scrollable {
+                height: 60%;
+                padding: 15px;
+                max-width: 80%;
+                background: rgba(255, 255, 255, 0.85);
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            p, .header_wrapper {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header_wrapper">
+        <header>Angelo's Wild One!</header>
+    </div>
+    <div class="scrollable">
+        <div class="story">
+            <p>In the heart of the <strong>Jungle</strong>, where the trees whisper secrets and the animals roam free, a little lion named <strong>Angelo</strong> has ruled for a whole year.</p>
+            <p>The elephants trumpeted, the monkeys danced, and the giraffes stretched their necks high to celebrate!</p>
+            <p>But wait! The party isn't complete without <strong>you</strong>. Join us for an adventure like no other, as we celebrate Angelo's <strong>1st Birthday</strong> in true wild style!</p>
+        </div>
+        <div class="jungle-theme">
+            <h2>You're Invited!</h2>
+            <p><strong>Date:</strong> 04/01/2025</p>
+            <p><strong>Time:</strong> 5:00 PM</p>
+            <p><strong>Theme:</strong> Wild One - Jungle Adventure</p>
+            <p>Location details will follow.</p>
+            <p>We can’t wait to celebrate with you! 🎉</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
