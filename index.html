@@ -13,13 +13,23 @@
             overflow: hidden;
             height: 100vh;
         }
+        .header_wrapper {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 1rem;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 10px;
-            gap: 20px;
+            gap: 200px;
             position: relative;
             height: 100vh;
             overflow: hidden;
@@ -59,17 +69,6 @@
             font-size: 1rem;
             line-height: 1.5;
         }
-        .header_wrapper {
-            color: rgba(255, 255, 255, 0.5);
-
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-top: 30px;
-            display: inline-block;
-            animation: bounce 1.5s infinite;
-        }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
@@ -94,6 +93,8 @@
             }
             .container {
                 height: 100vh;
+                gap: 20px;
+                padding-top: 0px;
                 justify-content: center;
             }
             .scrollable {
@@ -101,6 +102,9 @@
                 padding: 15px;
                 max-width: 80%;
                 background: rgba(255, 255, 255, 0.85);
+            }
+            .header_wrapper {
+                margin-top: 0px;
             }
             h2 {
                 font-size: 1.8rem;
